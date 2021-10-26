@@ -24,12 +24,29 @@ export default class AppClass extends Component {
     };
   }
 
+  addTodo = event => {
+    event.preventDefault();
+
+    this.setState(prevState => {
+      const newTodos = [
+        ...prevState.todos,
+        {
+          id: 4,
+          title: 'Hello',
+          isComplete: false,  
+        }
+      ];
+      return {todos:newTodos};
+    });
+      
+  };
+
   render() {
     return (
       <div className="todo-app-container">
         <div className="todo-app">
           <h2>Todo App</h2>
-          <form action="#">
+          <form action="#" onSubmit={this.addTodo}>
             <input
               type="text"
               className="todo-input"
