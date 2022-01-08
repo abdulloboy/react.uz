@@ -2,7 +2,7 @@ import React from "react";
 
 export default function NoTodos() {
   return (
-    <div class="no-todos-container">
+    <div className="no-todos-container">
       <svg
         id="abd5c76d-7219-42bc-94fd-ab97f702b65a"
         data-name="Layer 1"
